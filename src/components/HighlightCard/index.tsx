@@ -30,15 +30,15 @@ export default function HighlightCard({
   trasaction}: Props) {
   
   return (
-    <Container>
+    <Container type={type}>
       <Header>
-        <Title>{title}</Title>
+        <Title type={type}>{title}</Title>
         <Icon name={icon[type]} type={type} />
       </Header>
 
       <Footer>
-        <Amount>{amount}</Amount>
-        <LastTrasaction>{trasaction}</LastTrasaction>
+        <Amount type={type}>{amount}</Amount>
+        <LastTrasaction type={type}>{trasaction}</LastTrasaction>
       </Footer>
 
     </Container>
