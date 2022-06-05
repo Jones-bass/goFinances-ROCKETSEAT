@@ -113,13 +113,7 @@ export function Register() {
 
 
 
-  useEffect(() => {
-    async function loadData() {
-      const data = await AsyncStorage.getItem(dataKey)
-      console.log(JSON.parse(data!));
-    }
-    loadData();
-  }, [])
+ 
 
   return (
     <TouchableWithoutFeedback //ao clicar fora o teclado autofechar

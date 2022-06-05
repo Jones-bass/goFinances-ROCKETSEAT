@@ -1,7 +1,7 @@
 import React from "react";
 import { FlatList } from "react-native";
 import { Button } from "../../components/Forms/Button";
-import { categories } from "../../util/categories";
+import { categoriesUtils } from "../../util/categories";
 import {
     Container,
     Header,
@@ -41,7 +41,7 @@ export function CategorySelect({
       </Header>
 
       <FlatList
-        data={categories}
+        data={categoriesUtils}
         style={{ flex: 1, width: "100%" }}
         keyExtractor={(item) => item.key}
         renderItem={({ item }) => (
