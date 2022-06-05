@@ -3,8 +3,10 @@ import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
 import { Feather } from "@expo/vector-icons";
 import { getStatusBarHeight } from "react-native-iphone-x-helper";
 import { FlatList, FlatListProps } from "react-native";
+import { TouchableOpacity } from "react-native";
 
 import {DataListProps} from '.'
+
 
 export const Container = styled.View`
   flex: 1;
@@ -52,6 +54,10 @@ export const User = styled.View`
 export const Icon = styled(Feather)`
   color: ${({ theme }) => theme.colors.secundary};
   font-size: ${RFValue(24)}px;
+`;
+
+export const LogoutButton = styled(TouchableOpacity)`
+    
 `;
 
 export const UserGreeting = styled.Text`

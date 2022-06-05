@@ -2,10 +2,6 @@ import { RFValue } from 'react-native-responsive-fontsize';
 import styled from 'styled-components/native';
 import {Feather} from '@expo/vector-icons'
 
-/*import { GestureHandlerRootView } from 'react-native-gesture-handler';
-pra resolver erro no button no android caso haja necessidade*/
-
-
 interface CategoryProps {
     isActive: boolean
 }

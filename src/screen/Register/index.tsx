@@ -12,7 +12,7 @@ import { TransactionTypeButton } from "../../components/Forms/TransactionTypeBut
 import { CategorySelect } from "../CategorySelect";
 
 import {
-  Container,
+  Container,    
   Header,
   Title,
   Form,

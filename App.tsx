@@ -7,28 +7,32 @@ import {
   Poppins_400Regular,
   Poppins_500Medium,
   Poppins_700Bold,
-  
+
 } from '@expo-google-fonts/poppins';
 
 import theme from './src/global/theme';
 import AppLoading from 'expo-app-loading';
-import { Register } from './src/screen/Register';
+import { NavigationContainer } from '@react-navigation/native';
+import { AppRoutes } from './src/routes/app.routes';
 
 export default function App() {
-  const [ fontsLoad ] = useFonts({
+  const [fontsLoad] = useFonts({
     Poppins_400Regular,
     Poppins_500Medium,
     Poppins_700Bold
   });
 
-  if(!fontsLoad) {
-    return <AppLoading/>
+  if (!fontsLoad) {
+    return <AppLoading />
   }
 
 
   return (
     <ThemeProvider theme={theme}>
-      <Register />
+      <NavigationContainer>
+        <AppRoutes />
+      </NavigationContainer>
+
     </ThemeProvider>
   );
 }
