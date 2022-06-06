@@ -13,7 +13,7 @@ import {
 } from "./styles";
 
 export interface TransactionCardsProps {
-  type: 'positivo' | 'negativo';
+  type: 'positive' | 'negative';
   name: string;
   amount: string;
   category: string;
@@ -34,7 +34,7 @@ export default function TransactionCard({data}: Props) {
       <Title>{data.name}</Title>
       <Amount 
       type={data.type}>
-        {data.type === 'negativo' && '- ' }
+        {data.type === 'negative' && '- ' }
         {data.amount}
         </Amount>
 
