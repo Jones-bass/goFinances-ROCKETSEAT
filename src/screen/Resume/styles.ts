@@ -1,5 +1,6 @@
 import { RFValue } from "react-native-responsive-fontsize";
 import styled from "styled-components/native";
+import { Background } from "victory-native";
 
 export const Container = styled.View`
     flex: 1;
@@ -23,8 +24,14 @@ export const Title = styled.Text`
 `;
 
 export const Content = styled.ScrollView.attrs({
-    contentContainerStyle: { flex: 1, padding: 20 }
-})``;
+    contentContainerStyle: { flex: 1, padding: 15 }
+})`
+`;
+
+export const ChartContainer = styled.View`
+    width: 100%;
+    align-items: center;
+`;
 
 export const LoadContainer = styled.View`
     flex: 1;
