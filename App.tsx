@@ -18,6 +18,7 @@ import AppLoading from 'expo-app-loading';
 import { NavigationContainer } from '@react-navigation/native';
 import { AppRoutes } from './src/routes/app.routes';
 import { StatusBar } from 'react-native';
+import { SignIn } from './src/screen/SignIn';
 
 export default function App() {
   const [fontsLoad] = useFonts({
@@ -39,7 +40,7 @@ export default function App() {
                 translucent
                 barStyle="light-content"
             />
-        <AppRoutes />
+        <SignIn/>
       </NavigationContainer>
 
     </ThemeProvider>

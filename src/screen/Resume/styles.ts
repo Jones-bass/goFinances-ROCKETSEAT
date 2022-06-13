@@ -1,7 +1,7 @@
 import { RFValue } from "react-native-responsive-fontsize";
 import styled from "styled-components/native";
 import { Feather } from "@expo/vector-icons";
-import { BorderlessButton } from "react-native-gesture-handler";
+import { TouchableOpacity } from "react-native";
 
 
 export const Container = styled.View`
@@ -41,7 +41,7 @@ export const MonthSelect = styled.View`
     margin-top: 24px;
 `;
 
-export const MonthSelectButton = styled(BorderlessButton)``;
+export const MonthSelectButton = styled(TouchableOpacity)``;
 
 export const MonthSelectIcon = styled(Feather)`
     font-size: ${RFValue(20)}px;
