@@ -16,9 +16,9 @@ import {
 import theme from './src/global/theme';
 import AppLoading from 'expo-app-loading';
 import { NavigationContainer } from '@react-navigation/native';
-import { AppRoutes } from './src/routes/app.routes';
 import { StatusBar } from 'react-native';
 import { SignIn } from './src/screen/SignIn';
+import { AuthProvider } from './src/hooks/auth';
 
 export default function App() {
   const [fontsLoad] = useFonts({
@@ -35,14 +35,16 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <NavigationContainer>
-      <StatusBar
-                backgroundColor="transparent"
-                translucent
-                barStyle="light-content"
-            />
-        <SignIn/>
-      </NavigationContainer>
+        <StatusBar
+          backgroundColor="transparent"
+          translucent
+          barStyle="light-content"/>
 
+        <AuthProvider>
+          <SignIn />
+        </AuthProvider>
+
+      </NavigationContainer>
     </ThemeProvider>
   );
 }
